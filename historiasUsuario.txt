@@ -1,0 +1,91 @@
+#Funcionalidades juego toritos
+
+1.  Como: Jugador 1
+    Quiero: Ingresar un número de 4 dígitos y que me lo muestre
+    Para: Ver el número que estoy ingresando
+    Criterios de confirmación:  
+        Si el Jugador 1 ingresa “1234” se muestra en pantalla “1234”
+        Si el Jugador 1 no pone un número y le da al botón INICIAR, este devuelve un mensaje de “por favor ingresar un número para empezar a jugar”.
+        Si el Jugador 1 pone cualquier caracter distinto a números este devuelve un mensaje de “ingrese tipo de caracteres válido”
+
+2.  Como: Jugador 1
+    Quiero: Ingresar solamente 4 dígitos y que me lo muestre
+    Para: Que mi código sea más difícil de adivinar
+    Criterios de confirmación:  
+        Si el Jugador 1 pone menos de 4 dígitos este devuelve un mensaje de “cantidad de dígitos errónea, por favor ingrese una cantidad válida”
+
+3.  Como: Jugador 1
+    Quiero: Ingresar un número de 4 a 6 dígitos y que me lo muestre
+    Para: Que mi código no sea tan difícil de adivinar
+    Criterios de confirmación:  
+        Si el Jugador 1 pone más de 6 dígitos este devuelve un mensaje de “cantidad de dígitos errónea, por favor ingrese una cantidad válida” 
+
+4.  Como: Jugador 1
+    Quiero: Mi código secreto no sea identificable
+    Para: Que el Jugador 2 no sepa cuál es mi código y tenga que adivinarlo
+    Criterios de confirmación:  
+        Si el Jugador 1 pone un código “1234” en pantalla se muestra “@@@@” y si es “123456”  en pantalla se muestra “@@@@@@”
+
+5.  Como: Jugador 2
+    Quiero: Ingresar un número de 4 dígitos y que me lo muestre
+    Para: Ver el número que estoy ingresando
+    Criterios de confirmación:  
+        Si el Jugador 2 no pone un número y le da al botón ingresar, este devuelve un mensaje de “Intento no válido, por favor ingresar un número para empezar a jugar”.
+        Si el Jugador 1 pone cualquier caracter distinto a números este devuelve un mensaje de “ingrese tipo de caracteres válido”
+
+6.  Como: Jugador 2
+    Quiero: Ingresar solamente 4 dígitos y que me lo muestre
+    Para: Que mi intento sea del rango mínimo posible
+    Criterios de confirmación:  
+        Si el Jugador 2 pone menos de 4 dígitos este devuelve un mensaje de “Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida”
+
+7.  Como: Jugador 2
+    Quiero: Ingresar un número de 4 a 6 dígitos y que me lo muestre
+    Para: Que mi intento sea del rango máximo posible
+    Criterios de confirmación:  
+        Si el Jugador 2 pone más de 6 dígitos este devuelve un mensaje de “Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida” 
+    
+8.  Como: Jugador 2
+    Quiero: Ingresar un número de la misma cantidad de  dígitos del Jugador 1 y que me lo muestre
+    Para: Que mi intento sólo sea válido cuando coloco un número de la misma cantidad de dígitos
+    Criterios de confirmación:  
+        Si el Jugador 2 pone más o menos dígitos este devuelve un mensaje de “Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida” 
+
+9.  Como: Jugador 2
+    Quiero: ver si mi valor ingresado coincide con el código secreto
+    Para: Saber si adiviné el código secreto
+    Criterios de confirmación:  
+        Si el Jugador 2 ingresa un código este devuelve “INCORRECTO”  si no es igual al código secreto, si el código ingresado es igual sale  “CORRECTO”
+
+10. Como: Jugador 1
+    Quiero: que el Jugador 2 pierda si se equivoca
+    Para: ganar
+    Criterios de confirmación:  
+        Si el Jugador 2 ingresa un código “INCORRECTO”  sale “Jugador 1 gana” y vuelve a iniciar el juego
+
+11. Como: Jugador 2
+    Quiero: que el Jugador 1 pierda si acierto
+    Para: ganar
+    Criterios de confirmación:  
+        Si el Jugador 2 ingresa un código “CORRECTO”  sale “Jugador 2 gana” y vuelve a iniciar el juego
+
+12. Como: Jugador 2
+    Quiero: tener 10 intentos 
+    Para: no perder fácilmente 
+    Criterios de confirmación:  
+        Si el Jugador 2 ingresa un código “INCORRECTO”  su contador de “Intentos Disponibles” baja en 1.
+        Si el Jugador 2 ingresa un código “CORRECTO”  su contador de “Intentos Disponibles” se mantiene.
+        Si se llega a 0 intentos sale “Jugador 1” gana 
+
+13. Como: Jugador 2
+    Quiero: ver “Vacas” (*)
+    Para: saber cuantos caracteres son iguales que a los del código secreto
+    Criterios de confirmación:  
+        Cuando hay caracteres que coinciden se muestra una cantidad de “*” igual a los caracteres que coincidieron
+        Si no hay coincidencias devuelve “”
+
+14. Como: Jugador 2
+    Quiero: ver “Toros”
+    Para: saber cuantos caracteres son iguales y tienen la misma posición que los del código secreto
+    Criterios de confirmación:  
+        Cuando hay caracteres que coinciden en forma y posición se muestra una cantidad de “!” igual a los caracteres que coincidieron
