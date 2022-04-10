@@ -1,4 +1,4 @@
-import ingresarCodigo from "./vacasToros.js";
+import {ocultarCodigo,ingresarCodigo} from "./vacasToros.js";
 
 describe("Jugador 1", () => {
   it("muestra en pantalla lo que ingresa el jugador", () => {
@@ -15,6 +15,9 @@ describe("Jugador 1", () => {
   });
   it("no admite mas de 6 digitos", () => {
     expect(ingresarCodigo("1234567")).toEqual("cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
+  it("codigo secreto no es identificable", () => {
+    expect(ocultarCodigo("123456")).toEqual("@@@@@@");
   });
 });
 

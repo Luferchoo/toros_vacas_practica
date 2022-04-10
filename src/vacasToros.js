@@ -1,4 +1,4 @@
-import Exception from "./exception.js";
+import Exception from "./exception";
 
 function ingresarCodigo(codigo) {
   var verificador = new Exception(codigo);
@@ -8,5 +8,13 @@ function ingresarCodigo(codigo) {
   }
   return codigoNoSecreto;
 }
+function ocultarCodigo(codigo){
+  var suma = "";
+  for (let indice = 0; indice < codigo.length; indice++) {
+    suma += "@";
+  }
+  return suma;
+}
 
-export default ingresarCodigo;
+
+export {ocultarCodigo,ingresarCodigo};
