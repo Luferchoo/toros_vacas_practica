@@ -10,5 +10,8 @@ describe("Jugador 1", () => {
   it("no admite caracteres", () => {
     expect(ingresarCodigo("*/-+")).toEqual("ingrese tipo de caracteres válido");
   });
+  it("no puede colocar menos de 4 digitos", () => {
+    expect(ingresarCodigo("123")).toEqual("cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
 });
 
