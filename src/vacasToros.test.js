@@ -7,5 +7,8 @@ describe("Jugador 1", () => {
   it("no admite números vacios", () => {
     expect(ingresarCodigo("")).toEqual("por favor ingresar un número para empezar a jugar");
   });
+  it("no admite caracteres", () => {
+    expect(ingresarCodigo("*/-+")).toEqual("ingrese tipo de caracteres válido");
+  });
 });
 
