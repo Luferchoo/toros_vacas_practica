@@ -34,6 +34,9 @@ describe("Jugador 2", () => {
   it("No admite caracteres", () => {
     expect(jugador2.ingresarAdivinado("*/-+")).toEqual("Intento no válido, ingrese tipo de caracteres válido");
   });
+  it("No puede colocar menos de 4 digitos", () => {
+    expect(jugador2.ingresarAdivinado("446")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
 });
 
 
