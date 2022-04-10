@@ -7,28 +7,16 @@ class Exception{
     switteVerificador(codigo){
         this.mensaje = "OK"; 
         this.error = false;
-        this.codigoCorto(codigo);
-        this.codigoVacio(codigo);
-        this.codigoNoValido(codigo);
+        this.verificador(codigo.length < 4,"cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+        this.verificador(codigo.length === 0,"por favor ingresar un número para empezar a jugar");
+        this.verificador(isNaN(Number(codigo)),"ingrese tipo de caracteres válido");
     }
-    codigoVacio(codigo){
-        if(codigo.length === 0){
-            this.mensaje = "por favor ingresar un número para empezar a jugar";
+    verificador(funcion, mensaje){
+        if(funcion){
+            this.mensaje = mensaje;
             this.error = true
         }
-    }
-    codigoNoValido(codigo){
-        if(isNaN(Number(codigo)) === true){
-            this.mensaje = "ingrese tipo de caracteres válido";
-            this.error = true
-        }
-    }
-    codigoCorto(codigo){
-        if(codigo.length < 4){
-            this.mensaje = "cantidad de dígitos errónea, por favor ingrese una cantidad válida";
-            this.error = true
-        }
-    }
+    }   
 }
 
 export default Exception;
