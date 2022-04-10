@@ -9,7 +9,7 @@ function ingresarCodigo(codigo) {
   return codigoNoSecreto;
 }
 function ocultarCodigo(codigo){
-  var suma = "";
+  let suma = "";
   for (let indice = 0; indice < codigo.length; indice++) {
     suma += "@";
   }
