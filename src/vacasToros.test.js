@@ -31,6 +31,9 @@ describe("Jugador 2", () => {
   it("No admite números vacios", () => {
     expect(jugador2.ingresarAdivinado("")).toEqual("Intento no válido, por favor ingresar un número para empezar a jugar");
   });
+  it("No admite caracteres", () => {
+    expect(jugador2.ingresarAdivinado("*/-+")).toEqual("Intento no válido, ingrese tipo de caracteres válido");
+  });
 });
 
 
