@@ -2,6 +2,7 @@ import Adivinador from "./adivinador";
 import Secretista from "./secretista";
 var jugador1 = new Secretista();
 var jugador2 = new Adivinador();
+
 describe("Jugador 1", () => {
   it("Muestra en pantalla lo que ingresa", () => {
     expect(jugador1.ingresarCodigo("1234")).toEqual("1234");
@@ -22,9 +23,13 @@ describe("Jugador 1", () => {
     expect(jugador1.ocultarCodigo("123456")).toEqual("@@@@@@");
   });
 });
+
 describe("Jugador 2", () => {
   it("Muestra en pantalla el numero que adivina", () => {
     expect(jugador2.ingresarAdivinado("1234")).toEqual("1234");
+  });
+  it("No admite números vacios", () => {
+    expect(jugador2.ingresarAdivinado("")).toEqual("Intento no válido, por favor ingresar un número para empezar a jugar");
   });
 });
 
