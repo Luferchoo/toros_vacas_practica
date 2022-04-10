@@ -1,5 +1,7 @@
 import Adivinador from "./adivinador";
 import Secretista from "./secretista";
+import torosVacas from "./vacasToros";
+
 var jugador1 = new Secretista();
 var jugador2 = new Adivinador();
 
@@ -36,6 +38,15 @@ describe("Jugador 2", () => {
   });
   it("No puede colocar menos de 4 digitos", () => {
     expect(jugador2.ingresarAdivinado("446")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
+  it("No admite mas de 6 digitos", () => {
+    expect(jugador2.ingresarAdivinado("7543210")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
+});
+
+describe("Toros y Vacas", () => {
+  it("El Jugador 2 solo puede poner la cantidad exacta de digitos que puso el Jugador 1", () => {
+    expect(torosVacas("1234","12345")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
   });
 });
 
