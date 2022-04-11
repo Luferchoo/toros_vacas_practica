@@ -6,7 +6,7 @@ function torosVacas(codigoSecreto, adivinanza){
     let verificador = new Exception("OK");
     verificador.verificador(codigoSecreto.length != adivinanza.length,"cantidad de dígitos errónea, por favor ingrese una cantidad válida");
     let numMostrado = "Intento no válido, " + verificador.mensaje;
-    if(verificador.error === false){
+    if(!verificador.getError()){
         numMostrado = codigoSecreto;
     }
     return numMostrado;

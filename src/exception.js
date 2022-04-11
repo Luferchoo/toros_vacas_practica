@@ -14,6 +14,9 @@ class Exception{
             this.mensaje = mensaje;
             this.error = true
         }
+    }  
+    getError(){
+        return this.error;
     }   
 }
 
