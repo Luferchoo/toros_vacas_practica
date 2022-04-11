@@ -1,11 +1,8 @@
 import Exception from "./exception";
 class Adivinador{
     ingresarAdivinado(numAdivinado) {
-        let verificador = new Exception(numAdivinado);
-        let numMostrado = "Intento no válido, " + verificador.mensaje;
-        if(!verificador.getError()){
-            numMostrado = numAdivinado;
-        }
+        let verificador = new Exception(numAdivinado, "adivinador", "Intento no válido, ");
+        let numMostrado = verificador.mensaje;
         return numMostrado;
     }
 }

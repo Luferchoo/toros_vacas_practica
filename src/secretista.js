@@ -1,11 +1,8 @@
 import Exception from "./exception";
 class Secretista{
     ingresarCodigo(codigo) {
-        let verificador = new Exception(codigo, "secretista");
+        let verificador = new Exception(codigo, "secretista","");
         let codigoNoSecreto = verificador.mensaje; 
-        if(!verificador.getError()){
-          codigoNoSecreto = codigo;
-        }
         return codigoNoSecreto;
     }
     ocultarCodigo(codigo){
