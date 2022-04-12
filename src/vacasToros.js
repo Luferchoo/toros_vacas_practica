@@ -19,10 +19,12 @@ function seleccionarGanador(codigoSecreto, adivinanza){
 function mostrarVacas(codigoSecreto,intento) {
     let sumaToros = "";
     let sumaVacas = "";
+    let sumaTerneros = "";
     let suma = "";
     let vaca = "*";
     let toro = "!";
-    for (let indice = 0; indice < codigoSecreto; indice++) {
+    let ternero = "#";
+    for (let indice = 0; indice < codigoSecreto.length; indice++) {
         if (codigoSecreto.indexOf(intento[indice]) !== -1) {
             if (codigoSecreto.search(intento[indice])=== indice) {
                 sumaToros += toro;
@@ -31,8 +33,11 @@ function mostrarVacas(codigoSecreto,intento) {
                 sumaVacas += vaca;
             }
         }
+        else if (codigoSecreto.indexOf(intento[indice]+1) !== -1 || codigoSecreto.indexOf(intento[indice]-1) !== -1){
+            sumaTerneros += ternero;
+        }
     }
-    suma = sumaToros + sumaVacas;
+    suma = sumaToros + sumaVacas + sumaTerneros;
     return suma;
 }
 

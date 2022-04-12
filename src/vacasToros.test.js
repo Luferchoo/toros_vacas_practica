@@ -60,34 +60,34 @@ describe("Toros y Vacas", () => {
     expect(seleccionarGanador("1234","1234")).toEqual("Jugador 2 GANA");
   });
   it("El Jugador 2 tiene 10 intentos", () => {
-    expect(torosVacas("1234","8567","10")).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS:  INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
+    expect(torosVacas("1234","8967","10")).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS:  INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
   });
   it("El Jugador 2 tiene 10 intentos y se vuelven 0 cuando jugador 2 gana", () => {
     expect(torosVacas("1234","1234","10")).toEqual([-1,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !!!! INTENTOS DISPONIBLES: -1 GANADOR: Jugador 2 GANA"]);
   });
   it("Mostrar cantidad de coincidencias igual a los caracteres que coinciden con el codigo", () => {
-    expect(mostrarVacas("1234","2351")).toEqual("***");
+    expect(mostrarVacas("1234","2361")).toEqual("***");
   });
   it("mostrar si no hay coincidencias igual a los caracteres que coinciden con el codigo", () => {
-    expect(mostrarVacas("1234","5678")).toEqual("");
+    expect(mostrarVacas("1234","9678")).toEqual("");
   });
   it("mostrar toros hay coincidencias igual a los caracteres que coinciden con el codigo en forma y posicion", () => {
-    expect(mostrarVacas("1234","5637")).toEqual("!");
+    expect(mostrarVacas("1234","9637")).toEqual("!");
   });
   it("mostrar toros y vacas si hay coincidencias", () => {
-    expect(mostrarVacas("1234","1532")).toEqual("!!*");
+    expect(mostrarVacas("1234","1932")).toEqual("!!*");
   });
   it("mostrar toros y vacas si hay coincidencias", () => {
-    expect(mostrarVacas("2234","2345")).toEqual("!**");
+    expect(mostrarVacas("2234","2349")).toEqual("!**");
   });
   it("prueba para ver retroalimentacion para el jugador 2", () => {
-    expect(torosVacas("2234","2345",10)).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !** INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
+    expect(torosVacas("2234","2346",10)).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !** INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
   });
 });
 
 
 describe("EXAMEN", () => {
   it("Muestra terneros cuando un número ingresado coincide con el valor con diferencia en una unidad", () => {
-    expect(jugador2.mostrarVacas("1234","1235")).toEqual("#");
+    expect(mostrarVacas("1234","1235")).toEqual("!!!#");
   });
 });
