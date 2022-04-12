@@ -86,4 +86,8 @@ describe("Toros y Vacas", () => {
 });
 
 
-
+describe("EXAMEN", () => {
+  it("Muestra terneros cuando un número ingresado coincide con el valor con diferencia en una unidad", () => {
+    expect(jugador2.mostrarVacas("1234","1235")).toEqual("#");
+  });
+});
