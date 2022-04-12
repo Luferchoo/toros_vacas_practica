@@ -10,7 +10,8 @@ function torosVacasVerificador(codigoSecreto, adivinanza){
     }
     return numMostrado;
 }
-function torosVacas(codigoSecreto, adivinanza){
+
+function seleccionarGanador(codigoSecreto, adivinanza){
     let adivinanzaVerificada = torosVacasVerificador(codigoSecreto, adivinanza);
     let ganador = "Jugador 2 GANA"
     if (adivinanzaVerificada != codigoSecreto) {
@@ -19,4 +20,8 @@ function torosVacas(codigoSecreto, adivinanza){
     return ganador;
 }
 
-export {torosVacas,torosVacasVerificador};
+function torosVacas(codigoSecreto, adivinanza){
+    return null;
+}
+
+export {torosVacas,torosVacasVerificador,seleccionarGanador};
