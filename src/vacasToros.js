@@ -16,7 +16,7 @@ function seleccionarGanador(codigoSecreto, adivinanza){
     return ganador;
 }
 
-function mostrarVacas(codigoSecreto,intento) {
+function mostrarVacunos(codigoSecreto,intento) {
     let sumaToros = "";
     let sumaVacas = "";
     let sumaTerneros = "";
@@ -52,8 +52,8 @@ function torosVacas(codigoSecreto, adivinanza, intentosDisponibles){
     else{
         intentosDisponibles = -1;
     }
-    let retroalimentacion = "CODIGO SECRETO: " + secreto + " TOROS Y VACAS: " + mostrarVacas(codigoSecreto,adivinanza) + " INTENTOS DISPONIBLES: " + intentosDisponibles + " GANADOR: " + ganador;
+    let retroalimentacion = "CODIGO SECRETO: " + secreto + " TOROS Y VACAS: " + mostrarVacunos(codigoSecreto,adivinanza) + " INTENTOS DISPONIBLES: " + intentosDisponibles + " GANADOR: " + ganador;
     return [intentosDisponibles, retroalimentacion];
 }
 
-export {torosVacas,torosVacasVerificador,seleccionarGanador,mostrarVacas};
+export {torosVacas,torosVacasVerificador,seleccionarGanador,mostrarVacunos};

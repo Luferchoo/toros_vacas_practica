@@ -1,6 +1,6 @@
 import Adivinador from "./adivinador";
 import Secretista from "./secretista";
-import {torosVacas, torosVacasVerificador, seleccionarGanador, mostrarVacas} from "./vacasToros.js";
+import {torosVacas, torosVacasVerificador, seleccionarGanador, mostrarVacunos} from "./vacasToros.js";
 
 
 
@@ -66,19 +66,19 @@ describe("Toros y Vacas", () => {
     expect(torosVacas("1234","1234","10")).toEqual([-1,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !!!! INTENTOS DISPONIBLES: -1 GANADOR: Jugador 2 GANA"]);
   });
   it("Mostrar cantidad de coincidencias igual a los caracteres que coinciden con el codigo", () => {
-    expect(mostrarVacas("1234","2361")).toEqual("***");
+    expect(mostrarVacunos("1234","2361")).toEqual("***");
   });
   it("mostrar si no hay coincidencias igual a los caracteres que coinciden con el codigo", () => {
-    expect(mostrarVacas("1234","9678")).toEqual("");
+    expect(mostrarVacunos("1234","9678")).toEqual("");
   });
   it("mostrar toros hay coincidencias igual a los caracteres que coinciden con el codigo en forma y posicion", () => {
-    expect(mostrarVacas("1234","9637")).toEqual("!");
+    expect(mostrarVacunos("1234","9637")).toEqual("!");
   });
   it("mostrar toros y vacas si hay coincidencias", () => {
-    expect(mostrarVacas("1234","1932")).toEqual("!!*");
+    expect(mostrarVacunos("1234","1932")).toEqual("!!*");
   });
   it("mostrar toros y vacas si hay coincidencias", () => {
-    expect(mostrarVacas("2234","2349")).toEqual("!**");
+    expect(mostrarVacunos("2234","2349")).toEqual("!**");
   });
   it("prueba para ver retroalimentacion para el jugador 2", () => {
     expect(torosVacas("2234","2346",10)).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !** INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
@@ -88,6 +88,6 @@ describe("Toros y Vacas", () => {
 
 describe("EXAMEN", () => {
   it("Muestra terneros cuando un número ingresado coincide con el valor con diferencia en una unidad", () => {
-    expect(mostrarVacas("1234","1235")).toEqual("!!!#");
+    expect(mostrarVacunos("1234","1235")).toEqual("!!!#");
   });
 });
