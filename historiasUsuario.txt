@@ -30,8 +30,9 @@
     Quiero: Ingresar un número de 4 dígitos y que me lo muestre
     Para: Ver el número que estoy ingresando
     Criterios de confirmación:  
+        Si el jugador 2 ingresa un numero, este se muestra en pantalla
         Si el Jugador 2 no pone un número y le da al botón ingresar, este devuelve un mensaje de “Intento no válido, por favor ingresar un número para empezar a jugar”.
-        Si el Jugador 1 pone cualquier caracter distinto a números este devuelve un mensaje de “ingrese tipo de caracteres válido”
+        Si el Jugador 2 pone cualquier caracter distinto a números este devuelve un mensaje de “Intento no válido, ingrese tipo de caracteres válido”
 
 6.  Como: Jugador 2
     Quiero: Ingresar solamente 4 dígitos y que me lo muestre

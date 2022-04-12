@@ -1,4 +1,4 @@
-//import sumar from "./sumador";
+import torosVacas from "./vacasToros.js";
 
 const first = document.querySelector("#primer-numero");
 const second = document.querySelector("#segundo-numero");
@@ -13,3 +13,4 @@ form.addEventListener("submit", (event) => {
 
   div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
 });
+
