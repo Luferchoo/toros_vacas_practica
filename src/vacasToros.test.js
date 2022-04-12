@@ -1,6 +1,6 @@
 import Adivinador from "./adivinador";
 import Secretista from "./secretista";
-import {torosVacas, torosVacasVerificador, seleccionarGanador} from "./vacasToros.js";
+import {torosVacas, torosVacasVerificador, seleccionarGanador, mostrarVacas} from "./vacasToros.js";
 
 
 
@@ -60,10 +60,13 @@ describe("Toros y Vacas", () => {
     expect(seleccionarGanador("1234","1234")).toEqual("Jugador 2 GANA");
   });
   it("El Jugador 2 tiene 10 intentos", () => {
-    expect(torosVacas("1234","8567","10")).toEqual(9);
+    expect(torosVacas("1234","8567","10","")).toEqual(9);
   });
   it("El Jugador 2 tiene 10 intentos y se vuelven 0 cuando jugador 2 gana", () => {
-    expect(torosVacas("1234","1234","10")).toEqual(-1);
+    expect(torosVacas("1234","1234","10","")).toEqual(-1);
+  });
+  it("Mostrar cantidad de coincidencias igual a los caracteres que coinciden con el codigo", () => {
+    expect(mostrarVacas("1234","2351")).toEqual("***");
   });
 });
 
