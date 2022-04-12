@@ -16,7 +16,7 @@ function seleccionarGanador(codigoSecreto, adivinanza){
     return ganador;
 }
 
-function torosVacas(codigoSecreto, adivinanza,intentosDisponibles){
+function torosVacas(codigoSecreto, adivinanza, intentosDisponibles){
     let ganador = seleccionarGanador(codigoSecreto, adivinanza);
     if (ganador === "Jugador 1 GANA") {
         intentosDisponibles -= 1;
