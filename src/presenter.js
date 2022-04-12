@@ -1,4 +1,4 @@
-import torosVacas from "./vacasToros.js";
+import { torosVacas } from "./vacasToros";
 
 const secret = document.querySelector("#codigo-secreto");
 const intento = document.querySelector("#intento");
@@ -12,6 +12,6 @@ form.addEventListener("submit", (event) => {
   const intentoNumber = String(intento.value);
   const retroalimentacion="";
   const intentos = torosVacas(secretNumber,intentoNumber,contador);
-  div.innerHTML = "<p>" + intentos[0] + "</p>";
+  div.innerHTML = "<p>" + intentos[1] + "</p>";
 });
 
