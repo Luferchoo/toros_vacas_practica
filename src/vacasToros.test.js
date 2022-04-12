@@ -62,7 +62,9 @@ describe("Toros y Vacas", () => {
   it("El Jugador 2 tiene 10 intentos", () => {
     expect(torosVacas("1234","8567","10")).toEqual(9);
   });
-  
+  it("El Jugador 2 tiene 10 intentos y se vuelven 0 cuando jugador 2 gana", () => {
+    expect(torosVacas("1234","1234","10")).toEqual(-1);
+  });
 });
 
 

@@ -22,7 +22,7 @@ function torosVacas(codigoSecreto, adivinanza,intentosDisponibles){
         intentosDisponibles -= 1;
     }
     else{
-        intentosDisponibles = 0;
+        intentosDisponibles = -1;
     }
     return intentosDisponibles;
 }
