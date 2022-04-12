@@ -1,6 +1,7 @@
 import Adivinador from "./adivinador";
 import Secretista from "./secretista";
-import torosVacas from "./vacasToros";
+import {torosVacas, torosVacasVerificador} from "./vacasToros.js";
+
 
 var jugador1 = new Secretista();
 var jugador2 = new Adivinador();
@@ -46,7 +47,10 @@ describe("Jugador 2", () => {
 
 describe("Toros y Vacas", () => {
   it("El Jugador 2 solo puede poner la cantidad exacta de digitos que puso el Jugador 1", () => {
-    expect(torosVacas("1234","12345")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+    expect(torosVacasVerificador("1234","12345")).toEqual("Intento no válido, cantidad de dígitos errónea, por favor ingrese una cantidad válida");
+  });
+  it("El Jugador 2 pierde si no adivina", () => {
+    expect(torosVacas("1234","1235")).toEqual("Jugador 1 GANA");
   });
 });
 
