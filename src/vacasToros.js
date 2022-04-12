@@ -31,7 +31,6 @@ function mostrarVacas(codigoSecreto,intento) {
                 sumaVacas += vaca;
             }
         }
-        
     }
     suma = sumaToros + sumaVacas;
     return suma;
