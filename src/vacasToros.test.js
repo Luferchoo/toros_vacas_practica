@@ -68,6 +68,9 @@ describe("Toros y Vacas", () => {
   it("Mostrar cantidad de coincidencias igual a los caracteres que coinciden con el codigo", () => {
     expect(mostrarVacas("1234","2351")).toEqual("***");
   });
+  it("mostrar si no hay coincidencias igual a los caracteres que coinciden con el codigo", () => {
+    expect(mostrarVacas("1234","5678")).toEqual("");
+  });
 });
 
 
