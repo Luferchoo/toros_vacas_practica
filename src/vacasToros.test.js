@@ -52,6 +52,9 @@ describe("Toros y Vacas", () => {
   it("El Jugador 2 pierde si no adivina", () => {
     expect(torosVacas("1234","1235")).toEqual("Jugador 1 GANA");
   });
+  it("El Jugador 2 gana si adivina", () => {
+    expect(torosVacas("1234","1234")).toEqual("Jugador 1 GANA");
+  });
 });
 
 
