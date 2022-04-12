@@ -60,10 +60,10 @@ describe("Toros y Vacas", () => {
     expect(seleccionarGanador("1234","1234")).toEqual("Jugador 2 GANA");
   });
   it("El Jugador 2 tiene 10 intentos", () => {
-    expect(torosVacas("1234","8567","10","")).toEqual(9);
+    expect(torosVacas("1234","8567","10")).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS:  INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
   });
   it("El Jugador 2 tiene 10 intentos y se vuelven 0 cuando jugador 2 gana", () => {
-    expect(torosVacas("1234","1234","10","")).toEqual(-1);
+    expect(torosVacas("1234","1234","10")).toEqual([-1,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !!!! INTENTOS DISPONIBLES: -1 GANADOR: Jugador 2 GANA"]);
   });
   it("Mostrar cantidad de coincidencias igual a los caracteres que coinciden con el codigo", () => {
     expect(mostrarVacas("1234","2351")).toEqual("***");
@@ -79,6 +79,9 @@ describe("Toros y Vacas", () => {
   });
   it("mostrar toros y vacas si hay coincidencias", () => {
     expect(mostrarVacas("2234","2345")).toEqual("!**");
+  });
+  it("prueba para ver retroalimentacion para el jugador 2", () => {
+    expect(torosVacas("2234","2345",10)).toEqual([9,"CODIGO SECRETO: @@@@ TOROS Y VACAS: !** INTENTOS DISPONIBLES: 9 GANADOR: Jugador 1 GANA"]);
   });
 });
 

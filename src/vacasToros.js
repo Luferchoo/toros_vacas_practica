@@ -36,15 +36,19 @@ function mostrarVacas(codigoSecreto,intento) {
     return suma;
 }
 
-function torosVacas(codigoSecreto, adivinanza, intentosDisponibles, retroalimentacion){
+
+function torosVacas(codigoSecreto, adivinanza, intentosDisponibles){
     let ganador = seleccionarGanador(codigoSecreto, adivinanza);
+    let codigo = new Secretista(codigoSecreto);
+    let secreto = codigo.ocultarCodigo(codigoSecreto);
     if (ganador === "Jugador 1 GANA") {
         intentosDisponibles -= 1;
     }
     else{
         intentosDisponibles = -1;
     }
-    return intentosDisponibles;
+    let retroalimentacion = "CODIGO SECRETO: " + secreto + " TOROS Y VACAS: " + mostrarVacas(codigoSecreto,adivinanza) + " INTENTOS DISPONIBLES: " + intentosDisponibles + " GANADOR: " + ganador;
+    return [intentosDisponibles, retroalimentacion];
 }
 
 export {torosVacas,torosVacasVerificador,seleccionarGanador,mostrarVacas};
